@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//1. P태그와 h1태그를 한꺼번에 선택자로 지정.. 글씨 Orange
+		$('p,h1').css('color','orange');
+		
+		//2. div의 자식인 h1 태그를 선택자로 지정.. 배경색을 cyan
+		//$('div h1').css('background','cyan');
+		$('#wrap h1').css('background','cyan');
+		/* $('#wrap > h1').css('background','cyan');
+		>는 직계자시일때 사용하는 표현이다..*/
+		
+		//3. div 태그 중에서 id의 값이 wrap인 선택자를 지정...
+		$('div#wrap').css('background','gray');
+		
+		
+		
+	});
+
+	
+</script>
+</head>
+<body>
+<p>오늘은 Jquery Test를 합니다.</p>
+<h1>금요일입니다.</h1>
+<div id="wrap">의외로 오늘은 날씨가 덥습니다..
+	<div id ="tt">자식자식
+		<h1>주말에도 여전히 날씨가 좋을듯 합니다.</h1>
+
+</div>
+</div>
+<h1>JQuery는 3,4일 정도 진행할 것입니다.</h1>
+<div>Bootstrap 스터디는 다음주붜 진행하도록 합니다.</div>
+
+
+
+</body>
+</html>
