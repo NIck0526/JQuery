@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//h2 태그를 클릭하면 이벤트가 발생하도록 binding 함
+		/* $('h2').bind('click', function(){
+			$(this).html(function(index, html){
+				return html+'★';
+				
+			}); //html			
+		}); //bind */
+				
+		
+		x
+		
+		
+		/* $('h2').bind('click', function(){
+			$(this).val(function(index){ //form태그에서만 val 사용
+				return '★';
+				
+			}); //html			
+		}); //bind */
+		
+		
+		$('h2').bind('click',function() {
+			//2. h2태그를 클릭하면 동시에 진행되도록 ... 스페이스, 별 , 하트
+			$('h2').html(function(index, html) {
+				switch(index){
+				case 0: return html+'★';
+				case 1: return html+'♥';
+				case 2: return html+'♠';
+				
+				}//switch
+				
+			});//html			
+		});
+		
+	});
+
+	
+</script>
+</head>
+<body>
+	<h2>오늘 아침에는 비가 내렸습니다.</h2>
+	<h2>오후에는 비가 그쳐서 식사하러 가기 편할것 같네요.</h2>
+	<h2>내일은 하창한 날이 된다고 일기예보에서 봤습니다.</h2>
+
+
+</body>
+</html>

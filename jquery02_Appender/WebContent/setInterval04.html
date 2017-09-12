@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>select폼에서의 선택자지정, 폼 택에서의 val()</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//1. select 폼에서 선택한 값을 받아서 alert창으로 출력
+		//	var value= $('select>option:selected').val();
+		///alert(value); [Object Object]
+		//alert(value.length); // 4
+		//alert(value);
+		
+		//2. setTimeout()을 사용해서 3초 뒤에 로딩... 폼에서 선택한 이름이
+		// 3초 뒤에 alert창으로 출력 되도록 
+		/* setTimeout(function() {
+			var value= $('select>option:selected').val();
+			alert("선택한 이름은...."+value);
+			
+		},3000); */
+		
+		//3. 좀전에 배운 내용을 바탕으로 select폼에서 선택한 이름이
+		// 3초 뒤에 아래의 입력박스에 들어가도록 로직을 작성
+	
+		setTimeout(function() {
+			var value=$('select>option:selected').val();
+			$('input[type=text]').val(value);
+		}, 3000);
+
+		
+		
+		
+	});
+
+	
+</script>
+</head>
+<body>
+	<select multiple="multiple">
+	<option>영의</option>
+	<option>재웅</option>
+	<option>광민</option>
+	<option>기쁨</option>
+	
+	</select><br><br>
+	
+	<!-- 폼 추가 -->
+	
+	선택한 이름 출력 :: <input type="text" size="16">
+</body>
+</html>

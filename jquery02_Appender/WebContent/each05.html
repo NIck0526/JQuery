@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>each() 함수 사용법, this</title>
+<style type="text/css">
+	.high_light_0{background: yellow;}
+	.high_light_1{background: pink;}
+	.high_light_2{background: blue;}
+	.high_light_3{background: black;}
+	.high_light_4{background: green;}
+	.high_light_5{background: magenta;}
+	.high_light_6{background: red;}
+	.high_light_7{background: purple;}
+	
+	/* class 속성을 하나 더 추가 */
+	.kosta{ color: blue; font-family: "comic sans MS";}
+	
+	.th{border: 3px solid black; }
+	
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		
+		/*
+			each() : 특정한 동이란 태그가 반복될 때 사용
+			일종의 for문과 같다.
+			h1 태그에 each() 함수를 적용하면
+			h1 태그의 갯수만큼 each() 함수가 실행되는 원리이다.
+			첫번째 index는 0부터 시작한다.
+		
+		*/
+		$('h1').each(function(index) { // 0~7
+			// $('h1').addClass('high_light_'+index);  - 안됨
+			$(this).addClass('high_light_'+index);
+		
+		});// each
+		
+		//2. 반복문을 빠져나와서 별개의 css를 다시 적용
+		//h1 두번째 태그에 kosta를 적용
+		$('h1:eq(1)').addClass('kosta');
+		
+		//3. 여러개의 h1태그 중에서 짝수번째에 th를 적용
+		$('h1:even').addClass('th');
+		
+	});
+
+	
+</script>
+</head>
+<body>
+	<h1>Item-0</h1>
+	<h1>Item-1</h1>
+	<h1>Item-2</h1>
+	<h1>Item-3</h1>
+	<h1>Item-4</h1>
+	<h1>Item-5</h1>
+	<h1>Item-6</h1>
+	<h1>Item-7</h1>
+	
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!-- 
+html : Document의 구조를 정의
+css : html의 Presentation을 담당
+Javascript(JQuery) : html문서의 동적인 기능을 담당(이벤트)
+
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> append(), after()  | prepend(), before() :: 태그에 content를 부착</title>
+<style type="text/css">
+	body{
+		padding: 60px;
+	}
+	div{
+		border: 2px solid #bbb;
+		background-color: #eee; 
+		padding: 20px; // 칸안쪽의 여백
+		margin: 20px; // 칸 바깥쪽 여백
+	}
+	span{
+		width: 65px;
+		font: bold 12px Arial, sans-serif;
+		color: white;
+		padding: 5px 10px;
+		background-color: black;
+		
+	
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	 $(function (){
+		$('div')
+		.append('<span>1.Append</span>')
+		 .prepend('<span>2. Prepend</span>')
+		.before('<span>3. Before </span>')
+		.after('<span>4. After</span>');		
+	}); 
+
+	
+</script>
+</head>
+<body>
+<div>
+jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</div>
+
+
+
+</body>
+</html>

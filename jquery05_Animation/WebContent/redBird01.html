@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+	 position : relative;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//좌우 이동의 원리
+		$('img').animate({left:'+100'}, 'fast');
+		$('img').animate({left:'+400'}, 'fast');
+		$('img').animate({left:'+1000'}, 'fast');
+		
+		//redbird의 동적원리
+		$('img').animate({left:'+200'}, 'slow');
+		$('img').animate({width:'+200'}, 'slow');
+		$('img').animate({height:'+300'}, 'fast');
+		
+		//상하 이동의 원리
+		$('img').animate({top:'+200'}, 'slow');
+		$('img').animate({top:'+500'}, 'fast');
+		$('img').animate({top:'+800'}, 'slow');
+		
+		$('img').animate({top:'+500', left:'+300'}, 'slow');
+		
+		//1. 5초 뒤에 레드버드가 사라지도록 setTimeout(), hide()
+		
+		setTimeout(function() {
+			$('img').hide();
+			alert('redBird는 죽었다.');
+		},5000);
+		
+		setTimeout(function() {
+			$('img').show();
+			alert('두두두두두둥!!! ');
+		},10000);
+		
+	});
+
+	
+</script>
+</head>
+<body>
+	<img alt="" src="./image/redbird.png">
+</body>
+</html>

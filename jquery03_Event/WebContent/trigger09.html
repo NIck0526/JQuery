@@ -1,0 +1,71 @@
+
+<!--
+event 함수
+::
+alert()
+bind() | unbind()
+html(), text() | val()
+setTimeout() | setInterval()
+hover()
+click()
+find()
+show(), fadeIn() | hide(), fadeOut()
+----------------------------------------------------------------
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>trigger() :: 특별한 액션을 취하지 않아도 자동적으로 이벤트를 발생시키는 함수</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//1. 클릭할때마다 특정한 액션이 취해지는 이벤트 기능..
+		$('h1').click(function() {
+			$(this).html(function(index,html) {
+				return html+'★';
+			}); //html
+		});  //click
+		
+		//2. 클릭하지 않아도 자동적으로 위와 동일한 결과가 진행되도록 강제
+		//setInterval(), trriger()
+		 setInterval(function() {
+			$('h1').trigger('click');
+		},1000);
+		
+		//3. 멈추는 기능
+		
+		/* setInterval(function() {
+			$('h1').unbind();
+		},5000); */
+		
+		$('button').click(function() {
+			$('h1').unbind();
+		});
+		
+		function stopTrigger(event){
+			$('h1').unbind();
+			
+		};
+		
+	});//function
+</script>
+</head>
+<body>
+	<h1>Star :: </h1>
+	<button>Stop Trigger Event</button>
+	<hr>
+	<input type="button" value="Stop Trigger Button" onclick="stopTigger()">
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

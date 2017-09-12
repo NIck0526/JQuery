@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bind() :: 이벤트를 묶는 함수 : mouseenter+ mouseleave 2개를 묶어본다.</title>
+<style type="text/css">
+	.reverse{
+		background: blue; color: white;
+	}
+
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//1. h2태그를 선택자로 지정...bind()를 적용
+		$('h2').bind({
+			//마우스가 특정 영역 안으로 진입할때의 이벤트
+			mouseenter:function(){
+				$(this).addClass('reverse');
+			
+				
+			},
+			
+			//마우스가 특정 영역 밖으로 나갈때의 이벤트
+			mouseleave:function(){
+				$(this).removeClass('reverse');
+			} // bind
+		});//function
+	});//function
+
+	
+</script>
+</head>
+<body>
+	<h2>오늘 아침에는 비가 내렸습니다.</h2>
+	<h2>오후에는 비가 그쳐서 식사하러 가기 편할것 같네요.</h2>
+	<h2>내일은 하창한 날이 된다고 일기예보에서 봤습니다.</h2>
+</body>
+</html>

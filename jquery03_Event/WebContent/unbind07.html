@@ -1,0 +1,36 @@
+<!--
+클릭이벤트를 해제하는 기능
+unbind()를 사용한다.
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//1. 첫번째 h2태그를 클릭하면...
+		$('h2:eq(0)').click(function() {
+			//해당 클릭이벤트 부분이 click으로 바뀌도록(색깔이 RED)
+			//$(this).html('<fontcolor = red>CLICK</font>');
+			$(this).html('Click').css('color','red');
+			
+			alert("Click calling....");
+			
+			$(this).unbind();
+		});//click
+	});//function
+
+	
+</script>
+</head>
+<body>
+
+<h2>오늘 아침에는 비가 내렸습니다.</h2>
+	<h2>오후에는 비가 그쳐서 식사하러 가기 편할것 같네요.</h2>
+	<h2>내일은 하창한 날이 된다고 일기예보에서 봤습니다.</h2>
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>click() 함수 사용 :: 실제 기사내용에 적용</title>
+<style type="text/css">
+	*{ 
+		margin: 0px; 
+		padding:0px;
+		}
+	div{ 
+		margin: 5px;
+		padding: 3px;	
+		border: 3px solid black;
+		border-radius:10px;
+	}
+
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function (){
+		//1. 각각의 div영역을 클릭하면
+		$('div').click(function() {
+			//각각의 제목이 alert로 출력
+			/* var headline = $(this).find('h1').text();
+			alert(headline); */
+			var headline = $('h1',this).text();
+			var content = $('p',this).html();
+		    //var content = $('p',this).val();
+		 	
+		    alert(headline+"\n======================================\n"	+ content);
+		    //alert(headline);
+		});//click
+	});
+
+	
+</script>
+</head>
+<body>
+	<div>
+		<h1>제주의 이름 모를 숲을 지키는, 제주 벌꿀</h1>
+		<p>제주 사려니 숲 등산로에서부터 무려 2km를 더 들어가야 있는 때죽나무 군락지, 화학농약을 사용하지 않는 서귀포의 감귤농장, 최근 개발로 인해 점점 크고 작은 꽃 덤불들이 사라지는 애월읍 곶자왈. 벌꿀 채취를 위해 시작한 양봉이 아니기에 무조건 꿀을 얻기 위한 장소에서만 양봉을 하지 않습니다. ①사람들의 손, 발길이 닿지 않은곳, ②꿀벌에게 유해함을 덜 주는 농장 지역, 그리고 양봉을 통해 ③제주의 유명하지 않은 이름 모를 숲을 지키고자 양봉을 하고 있습니다.<p>
+	</div>
+	
+	
+	<div>
+		<h1>#뉴욕 #뉴욕여행 #맨하탄 #뉴욕커피 #맨하탄커피</h1>
+		<p>오늘은 차이나 타운에 있는 딤섬집에 가기전에 예전부터 가고싶었던 커피집을 방문했어요~
+멀리서 부터 돋보이는 카페의 인테리어 덕분에 쉽게 찾을 수 있었어용. 
+하지만 지하철역이랑 조금 멀다는게 아쉬웠어요. 하지만 멋진공간이 있다면 달려가야죠!
+이 곳은 하루 중 언제든지 커피를 즐길 수 있는 좋은 장소에요<p>
+	</div>
+	
+	
+	<div>
+		<h1>국경에도 종류가 있다? 국가별 국경을 소개합니다.</h1>
+		<p> 여러분들은 '국경'하면 어떤 생각이 떠오르시나요? 여행 꽤 자주 다니신다는 분 중 몇몇 분들도 아직은 우리나라와 북한 사이의 그 38선을 떠올리시는 분들이 있을 겁니다. 저도 아직 국경이란 단어를 들으면 뭔가 넘을 수 없는, 막연히 막혀있는 이미지가 머리에 사-악하고 떠오르는데요.<p>
+	</div>
+</body>
+</html>
