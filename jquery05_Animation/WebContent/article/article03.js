@@ -4,7 +4,9 @@ $(function(){
 	
 	//2. 두번째 p태그의 내용을 alert창으로 출력
 	//   두번째 p태그를 변수에 할당...
-	var secondP=$('p:eq(1)');
+	var second
+	
+	P=$('p:eq(1)');
 	//alert(secondP.text());
 	
 	//3. a를 클릭하면 함수호출되도록...

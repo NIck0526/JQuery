@@ -1,0 +1,19 @@
+1. 선택자 지정
+ : 태그, id, class속성
+ : 열거형
+ : 자식 (직계, 하위 모든자식)
+ : form 태그의 속성을 지정
+	ex) $('input[type=text]')
+ : first, eq(0), first(), last()
+ : even, odd
+
+
+2. prepend(), append() | before(), after()
+   addClass()
+   setTimeout(), setInterval()
+   $('select>option:selected').val()
+   val()
+   $('h1').each(function(index){
+   this 이벤트가 적용된 바로 그 지점
+   $('h1').filter(function(index){
+

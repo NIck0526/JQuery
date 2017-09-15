@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
  #kobox {
- 		font: bold 30px coiny;
+ 		font: bold 40px coiny;
  		padding: 4px 4px;
  		color: white;
   }
@@ -23,10 +23,9 @@
   </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-<div class="row">
-  <div class="col-sm-12">1313</div>
-</div>
+
+<!-- Navbar -->
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -35,18 +34,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-      <a id="kobox" class="navbar-brand" href="#">&nbsp; KOBox</a>
-    </div><br><br><br>
+      <a id="kobox" class="navbar-brand" href="#">KOBox</a>
+    </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li id="navfont" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> See A Movie <span class="caret"></span></a>
+      
+          <li id="navfont" class="dropdown"><a class="dropdown-toggle w3-center" data-toggle="dropdown" href="#"> See A Movie <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#section11">Titanic</a></li>
               <li><a href="#section12">X Man</a></li>
             </ul>
           </li>
-           <li id="navfont" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Our Theatres <span class="caret"></span></a>
+           <li id="navfont" class="dropdown"><a class="dropdown-toggle w3-center" data-toggle="dropdown" href="#"> Our Theatres <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#section21">GangNam</a></li>
               <li><a href="#section22">PanGyo</a></li>
@@ -73,6 +73,64 @@
     </div>
   </div>
 </nav>    
+
+
+
+<!-- Automatic Slideshow Images -->
+
+<div class="container" style="margin-top:100px">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="./image/munich.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./image/starwars.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="./image/starwars.jpeg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
 
 </body>
 </html>
