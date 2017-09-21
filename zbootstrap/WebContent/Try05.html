@@ -52,7 +52,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="material-icons w3-xxlarge">camera_roll</i>
     <p id="bar">See A Movie</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#theatre" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
    <i class="material-icons w3-xxlarge">event_seat</i>
     <p id="bar">Our Theatres</p>
   </a>
@@ -93,7 +93,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
   	<a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#movie" class="w3-bar-item w3-button" style="width:25% !important">MOVIE</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">OURS</a>
+    <a href="#theatre" class="w3-bar-item w3-button" style="width:25% !important">OURS</a>
     <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">FOOD</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
@@ -230,10 +230,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal">
             <span class="glyphicon glyphicon-remove"></span> Cancel
           </button>
-          <p>Need <a href="#">help?</a></p>
+          <p align="left"> <a href="#">Need help?</a>
         </div>
       </div>
     </div>
@@ -256,7 +256,159 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- \\\\\\\\\\\\\\\\ Movie end \\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 
+<!-- /////////////////////////// Our Theatres  ///////////////////////// -->
 
+
+<!-- Grid chains tables -->
+    <h3  class="w3-padding-16 w3-text-light-grey"></h3>
+    <div id="theatre" class="w3-row-padding" style="margin:100px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Kingdom Of KOBox</li>
+          <li class="w3-padding-16">166 Drury Ln, London, WC2B 5PW England</li>
+          <li class="w3-padding-16">+44 844 412 4654</li>
+          <li class="w3-padding-16">8 Screens</li>
+          <li class="w3-padding-16">Closure <br>Every last Sunday of the month</li>
+          <li class="w3-padding-16">
+            <img src="./image/london.jpg" style="width:500px">
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+          
+            <button class="w3-button w3-white w3-padding-large w3-hover-black" data-toggle="modal" data-target="#chainsModal1">
+            Detail Location</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">KOBox In Empire State</li>
+          <li class="w3-padding-16">5F-10F, 350 5th Ave, New York, NY 10118 USA</li>
+          <li class="w3-padding-16">+1 212-736-3100</li>
+          <li class="w3-padding-16">50 Screens</li>
+          <li class="w3-padding-16">Closure <br>Every last Sunday of the month</li>
+          <li class="w3-padding-16">
+            <img src="./image/newyork.jpg" style="width:500px">
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black" data-toggle="modal" data-target="#chainsModal2">
+            Detail Location</button>
+          </li>
+        </ul>
+      </div>
+     </div>
+    <!-- End chains tables -->
+  
+  
+  <!-- Modal for Chains 1 -->
+  <div class="modal fade" id="chainsModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-map-marker"></span> Map</h4>
+        </div>
+        <div class="modal-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8800012644842!2d-0.12490398430667327!3d51.515417479636426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b34aefddf73%3A0xe0fb90605d55394e!2s166+Drury+Ln!5e0!3m2!1sko!2skr!4v1505902859498" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p align="left"> <a href="#">Need help?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Modal for Chains 2 -->
+  <div class="modal fade" id="chainsModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-map-marker"></span> Map</h4>
+        </div>
+        <div class="modal-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6175407966884!2d-73.98785308468756!3d40.74844047932787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2z7Jeg7YyM7J207Ja0IOyKpO2FjOydtO2KuCDruYzrlKk!5e0!3m2!1sko!2skr!4v1505903145447" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p align="left"> <a href="#">Need help?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--End  Modal for Chains  -->
+
+
+
+<!--/////////////////////////////// Food and Drinks //////////////////////////////// -->
+
+
+<!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="./image/bowl.jpg" alt="bowl" style="width:300px">
+      <h3>Asian Steak & Shrimp Bowl</h3>
+      <p>Steak, jumbo shrimp, teriyaki stir-fried vegetables, almonds, green onions, ginger and cilantro atop a bed of sticky rice</p> <p>$50.49 </p>
+    </div>
+    <div class="w3-quarter">
+      <img src="./image/fries.jpg" alt="fries" style="width:300px">
+      <h3>Poutine Fries</h3>
+      <p>French fries, steak, gravy, mozzarella cheese and chives </p> <p>$25.29 </p>
+    </div>
+    <div class="w3-quarter">
+      <img src="./image/sushi.jpg" alt="sushi" style="width:300px">
+      <h3>Crab & Avocado Sushi Roll</h3>
+      <p>Crab and surimi, cucumber, avocado, Japanese mayo and sriracha mayo, served with wasabi, pickled ginger and soy sauce  </p> <p>$60.29 </p>
+   </div>
+    <div class="w3-quarter">
+      <img src="./image/wings.jpg" alt="Pasta and Wine" style="width:300px">
+      <h3>Dry Rub Wings</h3>
+      <p>Crispy chicken with a sweet and smoky maple rub, served with marinated vegetables and honey-chipotle BBQ ranch dipping sauce </p><p>$20.45 </p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+      <h3>All I Need Is a Popsicle</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+      <h3>Salmon For Your Skin</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+      <h3>The Perfect Sandwich, A Real Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+      <h3>Le French</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+  
+  
+  <!-- /////////////////// End Food & Drinks ////////////////////////  -->
+  
+  
+  
+  
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
@@ -303,44 +455,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <i class="fa fa-download"></i> Download Resume
     </button>
     
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
+    
     
     <!-- Testimonials -->
     <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
