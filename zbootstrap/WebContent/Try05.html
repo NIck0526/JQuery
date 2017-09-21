@@ -11,6 +11,32 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+	    //1. 어코디언을 적용
+	    $('#catalog').accordion();
+		 
+	    $('#catalog h3').draggable({
+	    	helper: "clone", /* 복사본을 만들어서 drag한다 */
+	    	appendTo: '#cart'
+	    });//draggable
+	    
+	    //2. droppable을 적용
+	    $('#cart ol').droppable({
+	    	drop:function(event, ui){
+	    		//placeholder 부분을 먼저 삭제한다...remove()
+	    		$(this).find('.placeholder').remove();
+	    		var uidrag=ui.draggable.text();
+	    		//alert(uidrag);
+	    		$(this).append('<li>'+uidrag+'</li>');//li 감싸준다.
+	    		
+	    	}
+	    });
+	  } );
+
+  </script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -20,7 +46,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-#kobox {font: bold 25px coiny; 	color: white;  }
+#kobox,cart {font: bold 25px coiny; 	color: white;  }
 #bar{font:  15px coiny; 	color: white;  }
 #coiny{font: bold coiny;  }
 .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
@@ -201,12 +227,74 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
   </div> 
   
+  
+  
   <!-- Modal -->
   
-   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+   <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog" style="border:1px solid white">
     
       <!-- Modal content-->
+      <div class="modal-content" >
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body w3-half" > 
+        
+        <form role="form">
+        <div class="form-group">
+         <img src="./image/dark2.jpg" alt="dark2" style="width:100%">
+            
+            
+                          
+              <h5 id="coiny" align="center">Why so Serious?</h5>
+             </div>
+             </div>
+           
+	             
+          </div>
+        <div class="modal-body w3-half">
+         <form role="form">
+        <h5 class="w3-padding-16 w3-text-light-grey">AUDIENCE SCORE</h5>
+    <p class="w3-wide">Action</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Story</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Acting</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div>
+        </div>
+        
+        <div class="modal-footer">
+         <button type="submit" class="btn btn-block" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">NEXT
+	                <span class="glyphicon glyphicon-ok"></span>
+	              </button>
+          <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p align="left"> <a href="#">Need help?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- End Modal  -->
+  
+  
+  
+  <!-- Modal2 -->
+  
+   <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal2 content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
@@ -240,7 +328,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 </div>
   
-   
+  <!-- End Modal2  -->
    
 <!-- Pagination -->
   <div class="w3-center w3-padding-32">
@@ -357,23 +445,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="catalog">
       <img src="./image/bowl.jpg" alt="bowl" style="width:300px">
       <h3>Asian Steak & Shrimp Bowl</h3>
       <p>Steak, jumbo shrimp, teriyaki stir-fried vegetables, almonds, green onions, ginger and cilantro atop a bed of sticky rice</p> <p>$50.49 </p>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="catalog">
       <img src="./image/fries.jpg" alt="fries" style="width:300px">
       <h3>Poutine Fries</h3>
       <p>French fries, steak, gravy, mozzarella cheese and chives </p> <p>$25.29 </p>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="catalog">
       <img src="./image/sushi.jpg" alt="sushi" style="width:300px">
       <h3>Crab & Avocado Sushi Roll</h3>
       <p>Crab and surimi, cucumber, avocado, Japanese mayo and sriracha mayo, served with wasabi, pickled ginger and soy sauce  </p> <p>$60.29 </p>
    </div>
-    <div class="w3-quarter">
-      <img src="./image/wings.jpg" alt="Pasta and Wine" style="width:300px">
+    <div class="w3-quarter" id="catalog">
+      <img src="./image/wings.jpg" alt="wings" style="width:300px">
       <h3>Dry Rub Wings</h3>
       <p>Crispy chicken with a sweet and smoky maple rub, served with marinated vegetables and honey-chipotle BBQ ranch dipping sauce </p><p>$20.45 </p>
     </div>
@@ -381,26 +469,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   
   <!-- Second Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
-      <h3>All I Need Is a Popsicle</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    <div class="w3-quarter" id="catalog">
+      <img src="./image/oreo.jpg" alt="oreo" style="width:300px">
+      <h3>Oreo Shake</h3>
+      <p>Oreo Cookies and ice cream together, you know it’s going to be good. </p><p>$13.85</p>
     </div>
-    <div class="w3-quarter">
-      <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
-      <h3>Salmon For Your Skin</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    <div class="w3-quarter" id="catalog">
+      <img src="./image/java.jpg" alt="java" style="width:300px">
+      <h3>Java Chip Frappuccino</h3>
+      <p>mocha sauce and Frappuccino® chips with coffee and milk and ice, then top with whipped cream and mocha drizzle to bring you endless java joy</p><p>$15.55 </p>
     </div>
-    <div class="w3-quarter">
-      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>The Perfect Sandwich, A Real Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    <div class="w3-quarter" id="catalog">
+      <img src="./image/irish.jpg" alt="irish" style="width:300px">
+      <h3>Irish Coffee</h3>
+      <p>Irish coffee is a cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream.</p><p>$20.15 </p>
     </div>
+    
+    
+    <!-- Cart -->
     <div class="w3-quarter">
-      <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
-      <h3>Le French</h3>
-      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <div id="cart" style="border:2px dotted white">
+ 	 	 	<div class="ui-widget-content">
+ 	 		<ol>
+ 	 		<div class="fa fa-shopping-cart" style="font-size:36px" align="center"></div>
+ 	 			<h2>Dropping Here!</h2>
+ 	 			<a href="#" class="btn btn-info btn-m">
+          <span class="glyphicon glyphicon-ok"></span>Pre Order</a><br><br>
+ 	 		</ol>
+ 	 	</div>
+ 	 </div>
     </div>
+    
+  
+    
+    <!--End Cart  -->
   </div>
   
   
