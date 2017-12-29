@@ -19,7 +19,7 @@
 	    //1. 어코디언을 적용
 	    $('#catalog').accordion();
 		 
-	    $('#catalog li').draggable({
+	    $('#catalog img').draggable({
 	    	helper: "clone", /* 복사본을 만들어서 drag한다 */
 	    	appendTo: '#cart'
 	    });//draggable
@@ -83,10 +83,11 @@
 	</div>
 	<!-- drop할 영역을 지정한다  -->
 	<div id="cart">
- 	 	<h2 class="ui-widget-header">장바구니</h2>
+ 	 	
  	 	<div class="ui-widget-content">
  	 		<ol>
- 	 			<li class="placeholder">Dropping Here!!</li>
+ 	 		<i class="fa fa-shopping-cart" style="font-size:36px"></i>
+ 	 			<h3>Dropping Here For Pre Order!</h3>
  	 		</ol>
  	 	</div>
  	 </div>
